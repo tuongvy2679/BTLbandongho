@@ -1,0 +1,22 @@
+<div class="col-lg-6">
+    <div class="main_menu menu_position text-left"> 
+        <nav>  
+            <ul>
+                <ng-container *ngFor="let mn of menus">
+                    <li *ngIf="mn.children !=null"><a class="active"  href="">{{mn.item_group_name}}<i class="fa fa-angle-down"></i></a>
+                        <ul class="sub_menu">
+                            <ng-container *ngFor="let m of mn.children">
+                                <li><a [routerLink] = "['/list',m.item_group_id]" >{{m.item_group_name}}</a></li>
+                            </ng-container> 
+                        </ul>
+                    </li>
+
+                    <li  *ngIf="mn.children == null"><a href="">{{mn.item_group_name}}</a></li>
+
+                </ng-container>
+                
+               
+            </ul>  
+        </nav> 
+    </div>
+</div>
