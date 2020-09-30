@@ -1,363 +1,588 @@
- <!--breadcrumbs area start-->
- <div class="breadcrumbs_area">
-    <div class="container">   
-        <div class="row">
-            <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>shop list</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>         
-</div>
-<!--breadcrumbs area end-->
+	<!-- Title Page -->
+	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(assets/images/heading-pages-02.jpg);">
+		<h2 class="l-text2 t-center">
+			Women
+		</h2>
+		<p class="m-text13 t-center">
+			New Arrivals Women Collection 2018
+		</p>
+	</section>
 
-<!--shop  area start-->
-<div class="shop_area shop_reverse">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-12">
-               <!--sidebar widget start-->
-                <aside class="sidebar_widget">
-                    <div class="widget_list widget_categories">
-                        <h3>Categories</h3>
-                        <ul>
-                            <li><a href="#">Cameras & Camcoders</a></li>
-                            <li class="widget_sub_categories"><a href="javascript:void(0)">Computer & Networking</a>
-                                <ul class="widget_dropdown_categories">
-                                    <li><a href="#">Computer</a></li>
-                                    <li><a href="#">Networking</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Games & Consoles</a></li>
-                            <li><a href="#">Headphone & Speaker</a></li>
-                            <li><a href="#">Movies & Video Games</a></li>
-                            <li><a href="#">Smartphone</a> </li>
-                            <li><a href="#">Uncategorized</a></li>
-                        </ul>
-                    </div>
-                    <div class="widget_list widget_filter">
-                        <h3>Price</h3>
-                        <!-- <form action="#">  -->
-                            <div id="slider-range"></div>   
-                            <button type="submit">Filter</button>
-                            <input type="text" name="text" id="amount" />   
-                        <!-- </form>  -->
-                    </div>
-                    <div class="widget_list widget_categories">
-                        <h3>Manufacturer</h3>
-                        <ul>
-                           <li>
-                                <input id="check1" type="checkbox">
-                                <label for="check1">Calvin Klein (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check2" type="checkbox">
-                                <label for="check2">Diesel (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check3" type="checkbox">
-                                <label for="check3">Tommy Hilfiger (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check4" type="checkbox">
-                                <label for="check4">Versace (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="widget_list widget_categories">
-                        <h3>Category</h3>
-                        <ul>
-                           <li>
-                                <input id="check5" type="checkbox">
-                                <label for="check5">Accessories (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check6" type="checkbox">
-                                <label for="check6">Dresses (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check7" type="checkbox">
-                                <label for="check7">Handbags (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                            <li>
-                                <input id="check8" type="checkbox">
-                                <label for="check8">Tops (8)</label>
-                                <span class="checkmark"></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="widget_list tags_widget">
-                        <h3>Product tags</h3>
-                        <div class="tag_cloud">
-                            <a href="#">blouse</a>
-                            <a href="#">clothes</a>
-                            <a href="#">fashion</a>
-                            <a href="#">handbag</a>
-                            <a href="#">laptop</a>
-                        </div>
-                    </div>
-                </aside>
-                <!--sidebar widget end-->
-            </div>
-            <div class="col-lg-9 col-md-12">
-                <!--shop banner area start-->
-                <div class="shop_banner_area mb-30">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="shop_banner_thumb">
-                                <img src="assets/img/bg/banner23.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--shop banner area end-->
-                <!--shop toolbar start-->
-                <div class="shop_toolbar_wrapper">
-                    <div class="shop_toolbar_btn">
-                        <button data-role="grid_4" type="button"  class=" btn-grid-4" data-toggle="tooltip" title="4"></button>
-                        <button data-role="grid_3" type="button" class=" btn-grid-3" data-toggle="tooltip" title="3"></button>
-                        <button data-role="grid_list" type="button"  class="active btn-list" data-toggle="tooltip" title="List"></button>
-                    </div>
-                    <div class=" niceselect_option">
-                        <!-- <form class="select_option" action="#"> -->
-                            <select name="orderby" id="short">
-                                <option selected value="1">Sort by average rating</option>
-                                <option  value="2">Sort by popularity</option>
-                                <option value="3">Sort by newness</option>
-                                <option value="4">Sort by price: low to high</option>
-                                <option value="5">Sort by price: high to low</option>
-                                <option value="6">Product Name: Z</option>
-                            </select>
-                        <!-- </form> -->
-                    </div>
-                    <div class="page_amount">
-                        <p>Showing 1–9 of 21 results</p>
-                    </div>
-                </div>
-                <!--shop toolbar end-->
-                <div class="row shop_wrapper grid_list">
-                    <ng-container *ngFor="let it of list">
-                        <div class="col-12 ">
-                            <article class="single_product">
-                                <figure>
-                                    <div class="product_thumb">
-                                        <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
-                                        <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
-                                        <div class="label_product">
-                                            <span class="label_sale">-56%</span>
-                                        </div>
-                                        <div class="quick_button">
-                                            <a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"><i class="icon-eye"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product_content grid_content">
-                                        <div class="product_content_inner">
-                                            <p class="manufacture_product"><a href="#">Parts</a></p>
-                                            <h4 class="product_name"><a [routerLink]="['/chitiet',it.item_id]">{{it.item_name}}</a></h4>
-                                            <div class="product_rating">
-                                               <ul>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                               </ul>
-                                            </div>
-                                            <div class="price_box"> 
-                                                <span class="old_price">$320.00</span> 
-                                                <span class="current_price">$120.00</span>
-                                            </div>
-                                        </div>
-                                        <div class="action_links">
-                                             <ul>
-                                                <li class="add_to_cart"><a href="cart.html" title="Add to cart">Add to cart</a></li>
-                                                <li class="wishlist"><a href="wishlist.html"  title="Add to Wishlist"><i class="icon-heart"></i></a></li>
-                                                <li class="compare"><a href="#" title="Add to Compare"><i class="icon-rotate-cw"></i></a></li> 
-                                            </ul>
-                                        </div> 
-                                    </div>
-                                    <div class="product_content list_content">
-                                        <div class="left_caption">
-                                           <p class="manufacture_product"><a href="#">Parts</a></p>
-                                            <h4 class="product_name"><a [routerLink]="['/chitiet',it.item_id]" >{{it.item_name}}</a></h4>
-                                            <div class="product_rating">
-                                               <ul>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                   <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                               </ul>
-                                            </div>
-                                            <div class="price_box"> 
-                                                <span class="old_price">$320.00</span> 
-                                                <span class="current_price">$120.00</span>
-                                            </div>
-                                            <div class="product_desc">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus</p>
-                                            </div>
-                                        </div>
-                                        <div class="right_caption">
-                                            <p class="text_available">Availability: <span>In Stock</span></p>
-                                            <div class="action_links">
-                                                <ul> 
-                                                    <li class="add_to_cart"><a href="cart.html" title="Add to cart">Add to cart</a></li>
-                                                    <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i>  Add to Wishlist</a></li>
-                                                    <li class="compare"><a href="#" title="compare"><i class="icon-rotate-cw"></i>Add to Compare</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </article>
-                        </div>
-                    </ng-container>
-                    
-                    
-                </div>
+	<!-- Content page -->
+	<section class="bgwhite p-t-55 p-b-65">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+					<div class="leftbar p-r-20 p-r-0-sm">
+						<!--  -->
+						<h4 class="m-text14 p-b-7">
+							Categories
+						</h4>
 
-                <div class="shop_toolbar t_bottom">
-                    <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-                </div>
-                <!--shop toolbar end-->
-                <!--shop wrapper end-->
-            </div>
-        </div>
-    </div>
-</div>
-<!--shop  area end-->
+						<ul class="p-b-54">
+							<li class="p-t-4">
+								<a href="#" class="s-text13 active1">
+									All
+								</a>
+							</li>
 
-<!--brand area start-->
-<div class="brand_area brand_padding">
-    <div class="container">
-        <div class="col-12">
-            <div class="brand_container owl-carousel ">
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand1.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand2.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand3.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand4.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand5.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand6.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand7.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand8.jpg" alt=""></a>
-                    </div>
-                </div>
-                 <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand1.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand2.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand3.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand4.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="brand_list">
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand5.jpg" alt=""></a>
-                    </div>
-                    <div class="single_brand">
-                        <a href="#"><img src="assets/img/brand/brand6.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--brand area end-->
+							<li class="p-t-4">
+								<a href="#" class="s-text13">
+									Women
+								</a>
+							</li>
 
-<!--newsletter area start-->
-<div class="newsletter_area newsletter_padding">
-    <div class="container">
-        <div class="newsletter_inner">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="newsletter_container">
-                        <h3>Follow Us</h3>
-                        <p>We make consolidating, marketing and tracking your social media website easy.</p>
-                        <div class="footer_social">
-                           <ul>
-                               <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-                               <li><a class="twitter" href="#"><i class="icon-twitter2"></i></a></li>
-                               <li><a class="rss" href="#"><i class="icon-rss"></i></a></li>
-                               <li><a class="youtube" href="#"><i class="icon-youtube"></i></a></li>
-                               <li><a class="google" href="#"><i class="icon-google"></i></a></li>
-                               <li><a class="instagram2" href="#"><i class="icon-instagram2"></i></a></li>
-                           </ul>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="newsletter_container">
-                        <h3>Newsletter Now</h3>
-                        <p>Join 60.000+ subscribers and get a new discount coupon on every Wednesday.</p>
-                        <div class="subscribe_form">
-                            <!-- <form id="mc-form" class="mc-form footer-newsletter" > -->
-                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter you email address here..." />
-                                <button id="mc-submit">Subscribe</button>
-                            <!-- </form> -->
-                            <!-- mailchimp-alerts Start -->
-                            <div class="mailchimp-alerts text-centre">
-                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                            </div><!-- mailchimp-alerts end -->
+							<li class="p-t-4">
+								<a href="#" class="s-text13">
+									Men
+								</a>
+							</li>
+
+							<li class="p-t-4">
+								<a href="#" class="s-text13">
+									Kids
+								</a>
+							</li>
+
+							<li class="p-t-4">
+								<a href="#" class="s-text13">
+									Accesories
+								</a>
+							</li>
+						</ul>
+
+						<!--  -->
+						<h4 class="m-text14 p-b-32">
+							Filters
+						</h4>
+
+						<div class="filter-price p-t-22 p-b-50 bo3">
+							<div class="m-text15 p-b-17">
+								Price
+							</div>
+
+							<div class="wra-filter-bar">
+								<div id="filter-bar"></div>
+							</div>
+
+							<div class="flex-sb-m flex-w p-t-16">
+								<div class="w-size11">
+									<!-- Button -->
+									<button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4">
+										Filter
+									</button>
+								</div>
+
+								<div class="s-text3 p-t-10 p-b-10">
+									Range: $<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="filter-color p-t-22 p-b-50 bo3">
+							<div class="m-text15 p-b-12">
+								Color
+							</div>
+
+							<ul class="flex-w">
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter1" type="checkbox" name="color-filter1">
+									<label class="color-filter color-filter1" for="color-filter1"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter2" type="checkbox" name="color-filter2">
+									<label class="color-filter color-filter2" for="color-filter2"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter3" type="checkbox" name="color-filter3">
+									<label class="color-filter color-filter3" for="color-filter3"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter4" type="checkbox" name="color-filter4">
+									<label class="color-filter color-filter4" for="color-filter4"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter5" type="checkbox" name="color-filter5">
+									<label class="color-filter color-filter5" for="color-filter5"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter6" type="checkbox" name="color-filter6">
+									<label class="color-filter color-filter6" for="color-filter6"></label>
+								</li>
+
+								<li class="m-r-10">
+									<input class="checkbox-color-filter" id="color-filter7" type="checkbox" name="color-filter7">
+									<label class="color-filter color-filter7" for="color-filter7"></label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="search-product pos-relative bo4 of-hidden">
+							<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+
+							<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
+								<i class="fs-12 fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+					<!--  -->
+					<div class="flex-sb-m flex-w p-b-35">
+						<div class="flex-w">
+							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+								<select class="selection-2" name="sorting">
+									<option>Default Sorting</option>
+									<option>Popularity</option>
+									<option>Price: low to high</option>
+									<option>Price: high to low</option>
+								</select>
+							</div>
+
+							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+								<select class="selection-2" name="sorting">
+									<option>Price</option>
+									<option>$0.00 - $50.00</option>
+									<option>$50.00 - $100.00</option>
+									<option>$100.00 - $150.00</option>
+									<option>$150.00 - $200.00</option>
+									<option>$200.00+</option>
+								</select>
+							</div>
+						</div>
+						<span class="s-text8 p-t-5 p-b-5">
+							Showing 1–12 of 16 results
+						</span>
+					</div>
+
+					<!-- Product -->
+					<div class="row">
+                        <ng-container *ngFor="let it of list">
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+                           
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+									<img src="assets/images/item-02.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$75.00
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-03.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$92.50
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-05.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$165.90
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+									<img src="assets/images/item-07.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-oldprice m-text7 p-r-5">
+										$29.50
+									</span>
+
+									<span class="block2-newprice m-text8 p-r-5">
+										$15.90
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+									<img src="assets/images/item-01.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$75.00
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-14.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Denim jacket blue
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$92.50
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+									<img src="assets/images/item-06.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Herschel supply co 25l
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$75.00
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-08.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Denim jacket blue
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$92.50
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-10.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+										Coach slim easton black
+									</a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$165.90
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+									<img src="assets/images/item-11.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-oldprice m-text7 p-r-5">
+										$29.50
+									</span>
+
+									<span class="block2-newprice m-text8 p-r-5">
+										$15.90
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+									<img src="assets/images/item-12.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$75.00
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+							<!-- Block2 -->
+							<div class="block2">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
+									<img src="assets/images/item-15.jpg" alt="IMG-PRODUCT">
+
+									<div class="block2-overlay trans-0-4">
+										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+										</a>
+
+										<div class="block2-btn-addcart w-size1 trans-0-4">
+											<!-- Button -->
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+												Add to Cart
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="block2-txt p-t-20">
+									<a class="block2-name dis-block s-text3
+                                            p-b-5" [routerLink]="['/chitiet',it.item_id]">
+                                            {{it.item_name}}
+                                        </a>
+
+									<span class="block2-price m-text6 p-r-5">
+										$92.50
+									</span>
+								</div>
+							</div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="newsletter_container col_3">
-                        <h3>GET THE APP</h3>
-                        <p>Mazlay App is now available on Google Play & App Store. Get it now.</p>
-                        <div class="app_img">
-                           <ul>
-                               <li><a href="#"><img src="assets/img/icon/icon-app.jpg" alt=""></a></li>
-                               <li><a href="#"><img src="assets/img/icon/icon1-app.jpg" alt=""></a></li>
-                           </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--newsletter area end-->
+                        </ng-container>
+					</div>
+
+					<!-- Pagination -->
+					<div class="pagination flex-m flex-w p-t-26">
+                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

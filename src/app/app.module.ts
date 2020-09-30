@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {APP_BASE_HREF} from '@angular/common';
 const routes: Routes = [
   {
     path: 'login',
@@ -46,7 +47,7 @@ const routes: Routes = [
     NgbModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
