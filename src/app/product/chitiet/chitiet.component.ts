@@ -1,4 +1,4 @@
-import { BaseComponent } from './../lib/base-component';
+import { BaseComponent } from '../../lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
 
 @Component({

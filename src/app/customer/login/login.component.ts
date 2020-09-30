@@ -1,4 +1,4 @@
-import { BaseComponent } from './../lib/base-component';
+import { BaseComponent } from '../../lib/base-component';
 import { Component, Injector, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 

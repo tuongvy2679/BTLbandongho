@@ -30,4 +30,8 @@ export class MainComponent extends BaseComponent implements OnInit {
       this.loadScripts();
     }); 
   }
+  addToCart(it) { 
+    this._cart.addToCart(it);
+    alert('Thêm thành công!'); 
+  }
 }

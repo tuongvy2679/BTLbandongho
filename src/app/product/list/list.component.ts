@@ -1,5 +1,5 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { BaseComponent } from '../lib/base-component';
+import { BaseComponent } from '../../lib/base-component';
 
 @Component({
   selector: 'app-list',
@@ -18,7 +18,7 @@ export class ListComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.list = [];
     this.page = 1;
-    this.pageSize = 6;
+    this.pageSize = 5;
     this._route.params.subscribe(params => {
       this.item_group_id = params['id'];
       this._api.post('/api/item/search', { page: this.page, pageSize: this.pageSize, item_group_id: this.item_group_id}).takeUntil(this.unsubscribe).subscribe(res => {
@@ -35,5 +35,10 @@ export class ListComponent extends BaseComponent implements OnInit {
         this.totalItems = res.totalItems;
         }, err => { });       
    });   
-  } 
+  }
+  addToCart(it) { 
+    this._cart.addToCart(it);
+    alert('Thêm thành công!'); 
+  }
+   
 }
