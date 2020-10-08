@@ -1,136 +1,59 @@
  <!--breadcrumbs area start-->
- <div class="breadcrumbs_area">
-    <div class="container">   
-        <div class="row">
-            <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>Checkout</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>         
-</div>
+ <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-color: antiquewhite;background-image: url(assets/img/slider/lookbook.jpg);">
+    <h2 class="l-text2 t-center" style="color: black;">
+        Đặt hàng
+    </h2>
+</section>   
+ 
 <!--breadcrumbs area end-->
 
 <!--Checkout page section-->
 <div class="checkout_page_bg">
     <div class="container">
         <div class="Checkout_section">
-            <div class="row">
-               <div class="col-12">
-                    <div class="user-actions">
-                        <h3> 
-                            <i class="fa fa-file-o" aria-hidden="true"></i>
-                            Returning customer?
-                            <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_login" aria-expanded="true">Click here to login</a>     
-
-                        </h3>
-                         <div id="checkout_login" class="collapse" data-parent="#accordion">
-                            <div class="checkout_info">
-                                <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing & Shipping section.</p>  
-                                <form action="#">  
-                                    <div class="form_group">
-                                        <label>Username or email <span>*</span></label>
-                                        <input type="text">     
-                                    </div>
-                                    <div class="form_group">
-                                        <label>Password  <span>*</span></label>
-                                        <input type="text">     
-                                    </div> 
-                                    <div class="form_group group_3 ">
-                                        <button type="submit">Login</button>
-                                        <label for="remember_box">
-                                            <input id="remember_box" type="checkbox">
-                                            <span> Remember me </span>
-                                        </label>     
-                                    </div>
-                                    <a href="#">Lost your password?</a>
-                                </form>          
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="user-actions">
-                        <h3> 
-                            <i class="fa fa-file-o" aria-hidden="true"></i>
-                            Returning customer?
-                            <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_coupon" aria-expanded="true">Click here to enter your code</a>     
-
-                        </h3>
-                         <div id="checkout_coupon" class="collapse" data-parent="#accordion">
-                            <div class="checkout_info">
-                                <form action="#">
-                                    <input placeholder="Coupon code" type="text">
-                                    <button type="submit">Apply coupon</button>
-                                </form>
-                            </div>
-                        </div>    
-                    </div>    
-               </div>
-            </div>
             <div class="checkout_form">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="checkout_form_left">
                             <form [formGroup]="hoadonForm" (ngSubmit)="onSubmit(hoadonForm.value)">
-                                <h3>Billing Details</h3>
-                                <div class="row">
-
-                                    <div class="col-lg-6 mb-20">
-                                        <label>Họ tên <span>*</span></label>
-                                        <input  formControlName="ho_ten" type="text">    
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <label>Địa chỉ</label>
-                                        <input formControlName="dia_chi"  type="text">     
-                                    </div>   
-                                    <div class="payment_method">
-                                        <div class="order_button">
-                                            <button  type="submit">Proceed to PayPal</button> 
-                                        </div>    
-                                    </div> 	    	    	    
+                                <h3>Thông tin người nhận</h3>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Họ và tên</label>
+                                  <input type="hoten"formControlName="ho_ten" class="form-control" id="exampleInputhoten" aria-describedby="hotenHelp" placeholder="Nhập họ và tên">
                                 </div>
-                            </form> 
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">Địa chỉ</label>
+                                  <input type="diachi" formControlName="dia_chi"  class="form-control" id="exampleInputDiachi" placeholder="Nhập địa chỉ">
+                                </div>
+                                <div class="payment_method">
+                                    <div class="order_button">
+                                        <button type="submit">Đặt hàng</button> 
+                                    </div>    
+                                </div> 
+                              </form>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="checkout_form_right">
-                            <!-- <form action="#">     -->
-                                <h3>Your order</h3> 
-                                <div class="order_table table-responsive">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr *ngFor="let it of items">
-                                                <td>{{it.item_name}} <strong> × {{it.quantity}}</strong></td>
-                                                <td> {{it.money}}<td>
-                                            </tr> 
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Cart Subtotal</th>
-                                                <td>$215.00</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Shipping</th>
-                                                <td><strong>$5.00</strong></td>
-                                            </tr>
-                                            <tr class="order_total">
-                                                <th>Order Total</th>
-                                                <td><strong>{{total}}</strong></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>     
-                                </div>
-                              
-                            <!-- </form>  -->
+                                <h3>Đơn hàng của bạn</h3> 
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Sản phẩm</th>
+                                        <th>Tổng tiền</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let it of items">
+                                            <td>{{it.item_name}} <strong> × {{it.quantity}}</strong></td>
+                                            <td> {{it.money}}<td>
+                                        </tr> 
+                                        <tr class="order_total">
+                                            <th>Số tiền thanh toán</th>
+                                            <td><strong>{{total}}</strong></td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
                         </div>        
                     </div>
                 </div> 

@@ -40,5 +40,9 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     });
 
   }
-
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
 }

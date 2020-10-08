@@ -22,11 +22,15 @@ export class ChitietComponent extends BaseComponent implements OnInit {
         });
       }); 
     });
-    
   }
-  
-  addToCart(it) { 
-    this._cart.addToCart(it);
+ 
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
+  addToCart(item) { 
+    this._cart.addToCart(item);
     alert('Thêm thành công!'); 
   }
 }

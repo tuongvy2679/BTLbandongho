@@ -1,7 +1,7 @@
 
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(assets/img/slider/lookbook.jpg);">
-		<h2 class="l-text2 t-center">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-color: antiquewhite;background-image: url(assets/img/slider/lookbook.jpg);">
+		<h2 class="l-text2 t-center" style="color: black;">
 			Giỏ hàng
 		</h2>
 	</section>
@@ -32,7 +32,7 @@
 							</td>
 							<td class="column-2">{{c.item_name}}</td>
                             <td class="column-3">{{c.item_price}}</td>
-                            <td class="product_quantity"><label></label> <input #inp  min="1" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number"></td>
+                            <td class="column-4 product_quantity"> <input #inp  min="1" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number"></td>
 							
 							<td class="column-5">{{c.money}}</td>
 						</tr>
@@ -62,7 +62,7 @@
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						{{total}}
+						{{quantity}}
 					</span>
 				</div>
 
