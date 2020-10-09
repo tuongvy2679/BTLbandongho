@@ -18,7 +18,7 @@
 								class="fa fa-angle-down"></i></a>
 						<ul class="sub_menu">
 							<ng-container *ngFor="let m of mn.children">
-								<li><a [routerLink]="['/list',m.item_group_id]">{{m.item_group_name}}</a></li>
+								<li><a [routerLink]="['/product/list',m.item_group_id]">{{m.item_group_name}}</a></li>
 							</ng-container>
 						</ul>
 					</li>
@@ -156,12 +156,12 @@
 									<div class="header-cart-item-img">
 										<img src="assets/img/product/{{c.item_image}}" alt="IMG-PRODUCT">
 									</div>
-		
+
 									<div class="header-cart-item-txt">
 										<a href="#" class="header-cart-item-name">
 											{{c.item_name}}
 										</a>
-		
+
 										<span class="header-cart-item-info">
 											{{c.quantity}} x {{c.item_price}}
 										</span>
@@ -181,7 +181,7 @@
 									Xem giỏ hàng
 								</a>
 							</div>
-		
+
 							<div class="header-cart-wrapbtn">
 								<!-- Button -->
 								<a routerLink="/customer/checkout" class="flex-c-m size1 bg1 bo-rad-20

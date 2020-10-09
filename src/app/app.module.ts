@@ -26,20 +26,20 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
-  { path: '**', component: NotFoundComponent}
+  { path: '**', component: NotFoundComponent }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    FooterComponent ],
+    FooterComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

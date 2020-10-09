@@ -40,5 +40,10 @@ export class ListComponent extends BaseComponent implements OnInit {
     this._cart.addToCart(it);
     alert('Thêm thành công!'); 
   }
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
    
 }

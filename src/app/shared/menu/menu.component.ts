@@ -33,5 +33,10 @@ export class MenuComponent extends BaseComponent implements OnInit {
       } 
     });
   }
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
 }
 
