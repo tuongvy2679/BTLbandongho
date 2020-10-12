@@ -15,7 +15,7 @@
         {{item.item_name}}
     </span>
 </div>
-<img src="assets/images/product-detail-01.jpg" alt="IMG-PRODUCT">
+<img src="assets/img/product/{{item.item_image}}" alt="IMG-PRODUCT">
 <!-- Product Detail -->
 <div class="container bgwhite p-t-35 p-b-80">
     <div class="flex-w flex-sb">
@@ -28,8 +28,8 @@
                     <div class="item-slick3"
                         data-thumb="images/thumb-item-03.jpg">
                         <div class="wrap-pic-w">
-                            <img src="assets/img/product/{{item.item_image}}"
-                                alt="IMG-PRODUCT">
+                            
+                                <img src="assets/img/product/{{item.item_image}}" alt="IMG-PRODUCT">
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,8 @@
             <h4 class="product-detail-name m-text16 p-b-13">
                 {{item.item_name}}
             </h4>
-
+            <img src="assets/img/product/{{item.item_image}}"
+            alt="IMG-PRODUCT">
             <span class="m-text17">
                 {{item.item_price}}
             </span>
