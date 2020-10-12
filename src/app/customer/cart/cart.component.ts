@@ -25,10 +25,10 @@ export class CartComponent extends BaseComponent implements OnInit {
       }
     });
   }
-  ngAfterViewInit() {
+  ngAfterViewInit() { 
     setTimeout(() => {
       this.loadScripts();
-    });
+    }); 
   }
   clearCart() {
     this._cart.clearCart();
