@@ -24,7 +24,9 @@ export class MainComponent extends BaseComponent implements OnInit {
         this.loadScripts();
       });
     }, err => { });
+    
   }
+  
   ngAfterViewInit() { 
     setTimeout(() => {
       this.loadScripts();
