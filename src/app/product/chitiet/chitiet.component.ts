@@ -1,5 +1,8 @@
 import { BaseComponent } from '../../lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
+import { Observable} from 'rxjs';
+import 'rxjs/add/observable/combineLatest';
+import 'rxjs/add/operator/takeUntil';
 
 @Component({
   selector: 'app-chitiet',

@@ -210,15 +210,13 @@
 										class="fa fa-angle-down"></i></a>
 								<ul class="sub_menu">
 									<ng-container *ngFor="let m of mn.children">
-										<li><a [routerLink]="['/list',m.item_group_id]">{{m.item_group_name}}</a></li>
+										<li><a [routerLink]="['/product/list',m.item_group_id]">{{m.item_group_name}}</a></li>
 									</ng-container>
 								</ul>
 							</li>
 
 							<li *ngIf="mn.children == null"><a href="">{{mn.item_group_name}}</a></li>
 						</ng-container>
-
-
 					</ul>
 				</nav>
 			</div>
