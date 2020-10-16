@@ -32,6 +32,7 @@ export class MenuComponent extends BaseComponent implements OnInit {
         this.quantity+=x.quantity;
       } 
     });
+    
   }
   ngAfterViewInit() { 
     setTimeout(() => {

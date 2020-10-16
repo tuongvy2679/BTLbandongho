@@ -41,6 +41,10 @@ export class LoginComponent extends BaseComponent implements OnInit {
       }, err => { });      
 
   }
-
-
+  
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
 }
