@@ -15,14 +15,14 @@ export class MainComponent extends BaseComponent implements OnInit {
   page: any;
   pageSize: any;
   totalItems:any;
-  item_id:any;
+  item_group_id:any;
   constructor(injector: Injector) { 
     super(injector);
   }
 
   ngOnInit(): void {
     Observable.combineLatest(
-      this._api.get('/api/item/get-all'),
+      this._api.get('/api/items/get-all'),
     ).takeUntil(this.unsubscribe).subscribe(res => {
       this.list_item = res[0];
 
@@ -33,10 +33,10 @@ export class MainComponent extends BaseComponent implements OnInit {
     }, err => { });
     this.list = [];
     this.page = 1;
-    this.pageSize = 3;
+    this.pageSize = 5;
     this._route.params.subscribe(params => {
-      this.item_id = params['id'];
-      this._api.post('/api/item/search', { page: this.page, pageSize: this.pageSize, item_group_id: this.item_id}).takeUntil(this.unsubscribe).subscribe(res => {
+      this.item_group_id = params['id'];
+      this._api.post('/api/items/search', { page: this.page, pageSize: this.pageSize, item_group_id: this.item_group_id}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       
@@ -46,7 +46,7 @@ export class MainComponent extends BaseComponent implements OnInit {
   loadPage(page) { 
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.post('/api/item/get-all', { page: page, pageSize: this.pageSize, item_id: id}).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.post('/api/items/search', { page: page, pageSize: this.pageSize, item_group_id: id}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       

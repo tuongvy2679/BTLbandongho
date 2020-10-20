@@ -37,7 +37,7 @@
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc1.jpg" alt="IMG-BENNER" style="width: 360px;    height: 470px;">
+					<img src="assets/img/slider/muc1.jpg" alt="IMG-BENNER" style="width: 360px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -51,7 +51,7 @@
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc2.jpg" alt="IMG-BENNER"style="width: 360px;    height: 470px;">
+					<img src="assets/img/slider/muc2.jpg" alt="IMG-BENNER"style="width: 360px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -65,7 +65,7 @@
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc3.jpg" alt="IMG-BENNER"style="width: 390px;    height: 470px;">
+					<img src="assets/img/slider/muc3.jpg" alt="IMG-BENNER"style="width: 390px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -164,9 +164,9 @@
 						</ng-container>
 					</div>
 					<!-- Pagination -->
-					<!-- <div class="pagination flex-m flex-w p-t-26">
+					<div class="pagination flex-m flex-w p-t-26">
                         <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-					</div> -->
+					</div>
 				</div>
 
 				<!-- - -->
@@ -263,12 +263,11 @@
 								</div>
 							</div>
 						</ng-container>
-						<!-- Pagination -->
-					<!-- <div class="pagination flex-m flex-w p-t-26">
-                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-					</div> -->
 					</div>
-					
+					<!-- Pagination -->
+					<div class="pagination flex-m flex-w p-t-26">
+                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+					</div>
 				</div>
 
 				<!--  -->
@@ -332,7 +331,7 @@
 			<span class="btn-play s-text4 hov5 cs-pointer p-t-25"
 				data-toggle="modal" data-target="#modal-video-01">
 				<i class="fa fa-play" aria-hidden="true"></i>
-				Xem Video
+				Play Video
 			</span>
 		</div>
 	</div>
