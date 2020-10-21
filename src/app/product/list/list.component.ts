@@ -1,5 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from '../../lib/base-component';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -10,9 +12,13 @@ export class ListComponent extends BaseComponent implements OnInit {
   list: any;
   page: any;
   pageSize: any;
-  totalItems:any;
-  item_group_id:any;
-  constructor(injector: Injector) { 
+  totalItems: any;
+  item_group_id: any;
+  public items: any;
+
+  public totalRecords: any;
+
+  constructor(injector: Injector, private _rou: Router) {
     super(injector);
   }
   ngOnInit(): void {
@@ -21,29 +27,34 @@ export class ListComponent extends BaseComponent implements OnInit {
     this.pageSize = 5;
     this._route.params.subscribe(params => {
       this.item_group_id = params['id'];
-      this._api.post('/api/items/search', { page: this.page, pageSize: this.pageSize, item_group_id: this.item_group_id}).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.post('/api/items/search', { page: this.page, pageSize: this.pageSize, item_group_id: this.item_group_id }).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
-        }, err => { });       
-   });   
+      }, err => { });
+    });
   }
-  loadPage(page) { 
-    this._route.params.subscribe(params => {
-      let id = params['id'];
-      this._api.post('/api/items/search', { page: page, pageSize: this.pageSize, item_group_id: id}).takeUntil(this.unsubscribe).subscribe(res => {
-        this.list = res.data;
-        this.totalItems = res.totalItems;
-        }, err => { });       
-   });   
-  }
-  addToCart(it) { 
-    this._cart.addToCart(it);
-    alert('Thêm thành công!'); 
-  }
-  ngAfterViewInit() { 
+  ngAfterViewInit() {
     setTimeout(() => {
       this.loadScripts();
-    }); 
+    });
   }
-   
+  search(timkiem) {
+    this._rou.navigate(["/product/search", timkiem]);
+  }
+
+  loadPage(page) {
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.post('/api/items/search', { page: page, pageSize: this.pageSize, item_group_id: id }).takeUntil(this.unsubscribe).subscribe(res => {
+        this.list = res.data;
+        this.totalItems = res.totalItems;
+      }, err => { });
+    });
+  }
+  addToCart(it) {
+    this._cart.addToCart(it);
+    alert('Thêm thành công!');
+  }
+
+
 }

@@ -25,11 +25,7 @@ export class CartComponent extends BaseComponent implements OnInit {
       }
     });
   }
-  ngAfterViewInit() { 
-    setTimeout(() => {
-      this.loadScripts();
-    }); 
-  }
+ 
   clearCart() {
     this._cart.clearCart();
     alert('Xóa thành công');
@@ -38,5 +34,10 @@ export class CartComponent extends BaseComponent implements OnInit {
     item.quantity = quantity;
     item.money = Number.parseInt(item.quantity) * item.item_price;
     this._cart.addQty(item);
+  }
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
   }
 }

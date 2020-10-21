@@ -257,7 +257,7 @@
 
 										<span class="block2-price m-text6
 											p-r-5">
-											{{it.item_price}}
+											{{ it.item_price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
 										</span>
 									</div>
 								</div>
@@ -347,12 +347,14 @@
 		</div>
 
 		<div class="row">
+			<ng-container *ngFor="let its of list_new">
+				
 			<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 				<!-- Block3 -->
 				<div class="block3">
 					<a href="blog-detail.html" class="block3-img dis-block
 						hov-img-zoom">
-						<img src="assets/img/blog/blog11.jpeg" alt="IMG-BLOG" style=" width: 370px;height: 370px;">
+						<img src="/{{its.tt_image}}" alt="IMG-BLOG" style=" width: 370px;height: 370px;">
 					</a>
 
 					<div class="block3-txt p-t-14">
@@ -360,7 +362,7 @@
 							<a
 								href="https://cocoshop.vn/news/xu-huong-lam-dep/son-han-quoc-nao-duoc-gioi-tre-san-don-nhat-hien-nay-354.html"
 								class="m-text11">
-								Son Hàn Quốc nào được giới trẻ săn đón nhất hiện nay
+								{{its.tt_name}}
 							</a>
 						</h4>
 
@@ -370,16 +372,12 @@
 							class="s-text7">July 22, 2017</span>
 
 						<p class="s-text8 p-t-16">
-							Hàn Quốc được xem là cái nôi mỹ phẩm tại Châu Á, với rất nhiều thương
-							hiệu khác nhau và rất được giới trẻ ưa chuộng. Bên cạnh những mặt hàng
-							nổi bật như cushion, phấn phủ, các sản phâm chăm sóc da như mặt nạ,
-							serum, lotion, nước hoa hồng,…
-
+							{{its.tt_description}}
 						</p>
 					</div>
 				</div>
 			</div>
-
+		</ng-container>
 			<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 				<!-- Block3 -->
 				<div class="block3">

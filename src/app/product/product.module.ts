@@ -3,10 +3,15 @@ import { ChitietComponent } from './chitiet/chitiet.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   {
     path: 'chitiet/:id',
     component: ChitietComponent,
+  },
+   {
+    path: 'search/:id',
+    component: SearchComponent,
   },
   {
     path: 'list/:id',
@@ -14,7 +19,7 @@ const routes: Routes = [
   },
 ];  
 @NgModule({
-  declarations: [ChitietComponent,ListComponent],
+  declarations: [ChitietComponent,ListComponent, SearchComponent],
   imports: [
     SharedModule,
     RouterModule.forChild(routes),
