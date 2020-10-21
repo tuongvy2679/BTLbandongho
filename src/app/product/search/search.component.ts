@@ -30,7 +30,7 @@ export class SearchComponent extends BaseComponent implements OnInit {
       this._api.post('/api/items/search1', { page: this.page, pageSize: this.pageSize, item_name: this.item_name}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
-        }, err => { });       
+        }, err => { });
    });
    this.formsearch = this.fb.group({
     'item_name': [''],
