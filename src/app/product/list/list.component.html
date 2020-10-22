@@ -1,5 +1,5 @@
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-color: antiquewhite;background-image: url(assets/img/slider/lookbook.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(assets/img/slider/lookbook.jpg)">
 	<h2 class="l-text2 t-center" style="color: black;">
 		Danh mục
 	</h2>
@@ -12,6 +12,14 @@
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm">
+						<div class="search-product pos-relative bo4 of-hidden">
+							<form [formGroup]=""  method="get">
+								<input class="s-text7 size6 p-l-23 p-r-50" type="text" id="headerSearch" placeholder="Tìm kiếm" #timkiem >
+								<button  class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4" (click)="search(timkiem.value)" >
+									<i class="fa fa-search" aria-hidden="true" ></i>
+								</button>
+						  </form>
+						</div>
 						<!--  -->
 						<h4 class="m-text14 p-b-7">
 							Danh mục
@@ -120,12 +128,9 @@
 							</ul>
 						</div> -->
 
-						<div class="search-product pos-relative bo4 of-hidden">
-							<form [formGroup]=""  method="get">
-								<input type="text" name="search" id="headerSearch" placeholder="Tìm kiếm" #timkiem >
-								<button  (click)="search(timkiem.value)" ><i class="fa fa-search" aria-hidden="true" ></i></button>
-						  </form>
-						</div>
+						
+
+					
 					
 						<!-- <form class="form-horizontal" role="form" [formGroup]="formsearch"  (ngSubmit)="search1()">
 							<div class="form-group">
@@ -200,7 +205,7 @@
 
 								<div class="block2-txt p-t-20">
 									<a class="block2-name dis-block s-text3
-                                            p-b-5" [routerLink]="['product/chitiet',it.item_id]">
+                                            p-b-5" [routerLink]="['product/chitiet/',it.item_id]" >
                                             {{it.item_name}}
                                         </a>
 

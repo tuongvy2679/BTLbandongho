@@ -34,10 +34,12 @@
 <div class="banner bgwhite p-t-40 p-b-40">
 	<div class="container">
 		<div class="row">
+			
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc1.jpg" alt="IMG-BENNER" style="width: 360px;">
+					<img src="assets/img/slider/muc1.jpg" alt="IMG-BENNER" style="    width: 360px;
+					height: 480px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -51,7 +53,8 @@
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc2.jpg" alt="IMG-BENNER"style="width: 360px;">
+					<img src="assets/img/slider/muc2.jpg" alt="IMG-BENNER"style="    width: 360px;
+					height: 480px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -65,7 +68,8 @@
 			<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 				<!-- block1 -->
 				<div class="block1 hov-img-zoom pos-relative m-b-30">
-					<img src="assets/img/slider/muc3.jpg" alt="IMG-BENNER"style="width: 390px;">
+					<img src="assets/img/slider/muc3.jpg" alt="IMG-BENNER"style="    width: 360px;
+					height: 480px;">
 					<div class="block1-wrapbtn w-size2">
 						<!-- Button -->
 						<a href="#" class="flex-c-m size2 m-text2 bg3 hov1
@@ -163,10 +167,7 @@
 							
 						</ng-container>
 					</div>
-					<!-- Pagination -->
-					<div class="pagination flex-m flex-w p-t-26">
-                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-					</div>
+					
 				</div>
 
 				<!-- - -->
@@ -263,10 +264,6 @@
 								</div>
 							</div>
 						</ng-container>
-					</div>
-					<!-- Pagination -->
-					<div class="pagination flex-m flex-w p-t-26">
-                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
 					</div>
 				</div>
 
@@ -371,73 +368,13 @@
 						<span class="s-text6">on</span> <span
 							class="s-text7">July 22, 2017</span>
 
-						<p class="s-text8 p-t-16">
+						<p class="s-text8 p-t-16" style="height: 200px;overflow: hidden;">
 							{{its.tt_description}}
 						</p>
 					</div>
 				</div>
 			</div>
 		</ng-container>
-			<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-				<!-- Block3 -->
-				<div class="block3">
-					<a href="blog-detail.html" class="block3-img dis-block
-						hov-img-zoom">
-						<img src="assets/img/blog/blog22.jpeg" alt="IMG-BLOG"style=" width: 370px;height: 370px;">
-					</a>
-
-					<div class="block3-txt p-t-14">
-						<h4 class="p-b-7">
-							<a
-								href="https://cocoshop.vn/news/xu-huong-lam-dep/nhung-loai-mat-na-tot-nhat-hien-nay-chi-em-nen-thu-355.html"
-								class="m-text11">
-								Những loại mặt nạ tốt nhất hiện nay chị em nên thử
-							</a>
-						</h4>
-
-						<span class="s-text6">By</span> <span
-							class="s-text7">Nancy Ward</span>
-						<span class="s-text6">on</span> <span
-							class="s-text7">July 18, 2017</span>
-
-						<p class="s-text8 p-t-16">
-							Hiện nay xuất hiện rất nhiều loại mặt nạ dưỡng, thanh lọc, cấp ẩm qua
-							đêm… không chỉ cung cấp thêm những dưỡng chất cần thiết, mà còn là một
-							cách giúp bạn thư giãn và thể hiện sự quan tâm với làn da mình.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-				<!-- Block3 -->
-				<div class="block3">
-					<a href="blog-detail.html" class="block3-img dis-block
-						hov-img-zoom">
-						<img src="assets/img/blog/blog33.jpeg" alt="IMG-BLOG"style=" width: 370px;height: 370px;">
-					</a>
-
-					<div class="block3-txt p-t-14">
-						<h4 class="p-b-7">
-							<a
-								href="https://cocoshop.vn/news/xu-huong-lam-dep/top-5-loai-loai-sua-rua-mat-an-khach-nhat-nam-2020-chi-em-nen-thu-353.html"
-								class="m-text11">
-								Top 5 loại loại sữa rửa mặt ăn khách nhất năm 2020 chị em nên thử
-							</a>
-						</h4>
-
-						<span class="s-text6">By</span> <span
-							class="s-text7">Nancy Ward</span>
-						<span class="s-text6">on</span> <span
-							class="s-text7">July 2, 2017</span>
-
-						<p class="s-text8 p-t-16">
-							Hầu hết chị em đã biết rằng hiện tại sữa rửa mặt đang vô cùng phổ biến
-							đối với phái đẹp, rất nhiều loại và giá thành khác nhau cho bạn lựa chọn.
-						</p>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>

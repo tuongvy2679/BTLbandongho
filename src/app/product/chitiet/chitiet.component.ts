@@ -24,7 +24,7 @@ export class ChitietComponent extends BaseComponent implements OnInit {
   getByID(id){
     this._api.get('/api/items/get-by-id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
     this.item = res;
-    debugger
+   
     this.getByCategory(res.item_group_id)      
     setTimeout(() => {
         this.loadScripts();

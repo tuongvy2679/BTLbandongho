@@ -1,8 +1,8 @@
 
 <!-- breadcrumb -->
 <div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
-    <a href="index.html" class="s-text16">
-        Home
+    <a href="/home" class="s-text16">
+        Trang chủ
         <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
     </a>
 
@@ -28,24 +28,9 @@
                                 <img style="height: 470px;" src="/{{item.item_image}}" alt="IMG-PRODUCT">
                         </div>
                     </div>
-                    <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-                        <div class="flex-m bor9 p-r-10 m-r-11">
-                            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
-                                <i class="zmdi zmdi-favorite"></i>
-                            </a>
-                        </div>
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
+                    <div class="p-b-45">
+                        <span class="s-text8 m-r-35">SKU: MUG-01</span>
+                        <span class="s-text8">Categories: Mug, Design</span>
                     </div>
                 </div>
             </div>
@@ -90,38 +75,24 @@
                     </div>
                 </div>
             </div>
-            <div class="p-b-45">
-                <span class="s-text8 m-r-35">SKU: MUG-01</span>
-                <span class="s-text8">Categories: Mug, Design</span>
-            </div>
-
+            
             <!--  -->
             <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                 <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                    Description
+                    Mô tả
                     <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
-                    <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+              
                 </h5>
 
-                <div class="dropdown-content dis-none p-t-15 p-b-23">
+                <div >
                     <p class="s-text8">
-                        Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
+                        {{item.item_description}} 
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container">
-    <div class="sec-title p-b-60">
-        <h3 class="m-text5 t-center">
-            Mô tả 
-        </h3>
-        {{item.item_description}}
-    </div>
-</div>
-
 <!-- Blog -->
 <section class="blog bgwhite p-t-94 p-b-65">
 	<div class="container">
@@ -155,7 +126,7 @@
 						<span class="s-text6">on</span> <span
 							class="s-text7">July 22, 2017</span>
 
-						<p class="s-text8 p-t-16">
+						<p class="s-text8 p-t-16" style="height: 200px;overflow: hidden;">
 							{{its.item_description}}
 						</p>
 					</div>
