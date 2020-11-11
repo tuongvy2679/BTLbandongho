@@ -4,10 +4,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { SearchComponent } from './search/search.component';
+import { TintucComponent } from './tintuc/tintuc.component';
 const routes: Routes = [
   {
     path: 'chitiet/:id',
     component: ChitietComponent,
+  },
+  {
+    path: 'tintuc/:id',
+    component: TintucComponent,
   },
    {
     path: 'search/:id',
@@ -19,7 +24,7 @@ const routes: Routes = [
   },
 ];  
 @NgModule({
-  declarations: [ChitietComponent,ListComponent, SearchComponent],
+  declarations: [ChitietComponent,ListComponent, SearchComponent, TintucComponent],
   imports: [
     SharedModule,
     RouterModule.forChild(routes),

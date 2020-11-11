@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ListComponent extends BaseComponent implements OnInit {
   list: any;
+  menus:any;
   page: any;
   pageSize: any;
   totalItems: any;
@@ -22,6 +23,9 @@ export class ListComponent extends BaseComponent implements OnInit {
     super(injector);
   }
   ngOnInit(): void {
+    this._api.get('/api/itemgroup/get-menu').takeUntil(this.unsubscribe).subscribe(res => {
+      this.menus = res;
+    }); 
     this.list = [];
     this.page = 1;
     this.pageSize = 5;
