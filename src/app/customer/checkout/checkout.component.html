@@ -46,11 +46,15 @@
                                     <tbody>
                                         <tr *ngFor="let it of items">
                                             <td>{{it.item_name}} <strong> × {{it.quantity}}</strong></td>
-                                            <td> {{it.money}}<td>
+                                            
+                                                <td>{{ it.money.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</td>
+
                                         </tr> 
                                         <tr class="order_total">
                                             <th>Số tiền thanh toán</th>
-                                            <td><strong>{{total}}</strong></td>
+                                            <td><strong>{{ total.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</strong></td>
+ 
+
                                         </tr>
                                     </tbody>
                                   </table>

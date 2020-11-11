@@ -31,10 +31,11 @@
 								</div>
 							</td>
 							<td class="column-2">{{c.item_name}}</td>
-                            <td class="column-3">{{c.item_price}}</td>
+							<td class="column-3">{{ c.item_price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</td>
+							
                             <td class="column-4 product_quantity"> <input #inp  min="1" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number"></td>
 							
-							<td class="column-5">{{c.money}}</td>
+							<td class="column-5">{{ c.money.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}</td>
 						</tr>
 					</table>
 				</div>
@@ -73,7 +74,8 @@
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						{{total}}
+						{{ total.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
+
 					</span>
 				</div>
 

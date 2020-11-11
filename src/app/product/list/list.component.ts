@@ -66,5 +66,4 @@ export class ListComponent extends BaseComponent implements OnInit {
       this.loadPage(this.page); 
       });
   }
-
 }
