@@ -46,7 +46,16 @@
 									<option>Price: high to low</option>
 								</select>
 							</div>
-
+							<div class="product-sorting d-flex">
+								<p>Chọn số sản phẩm:</p>
+								<!-- <form [formGroup]="" method="get"> -->
+									<select id="sortByselect" [(ngModel)]="pageSize" (ngModelChange)="loadPage(1)" style="border: 1px solid #1d1a1a38;                                     width: 50px;">
+										<option selected value="3">3</option>
+										<option selected value="5">5</option>
+										<option selected value="20">20</option>
+									</select>
+								<!-- </form> -->
+							</div>
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 								<select class="selection-2" name="sorting">
 									<option>Price</option>
@@ -95,7 +104,7 @@
                                         </a>
 
 									<span class="block2-price m-text6 p-r-5">
-										{{it.item_price}}
+										{{ it.item_price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
 									</span>
 								</div>
 							</div>

@@ -42,7 +42,8 @@
             </h4>
 
             <span class="m-text17">
-                {{item.item_price}}
+             
+                {{ item.item_price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
             </span>
 
             <!--  -->
@@ -119,11 +120,7 @@
 							</a>
 						</h4>
 
-						<span class="s-text6">By</span> <span
-							class="s-text7">Nancy Ward</span>
-						<span class="s-text6">on</span> <span
-							class="s-text7">July 22, 2017</span>
-
+						 
 						<p class="s-text8 p-t-16" style="height: 200px;overflow: hidden;">
 							{{its.item_description}}
 						</p>

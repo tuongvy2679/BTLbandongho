@@ -23,7 +23,7 @@
                     <div class="p-b-40">
                         <div class="blog-detail-img wrap-pic-w">
                             <img src="/{{item.tt_image}}"style="
-                            height: 500px;" alt="IMG-BLOG">
+                            height: 700px;" alt="IMG-BLOG">
                         </div>
 
                         <div class="blog-detail-txt p-t-33">
@@ -91,14 +91,11 @@
                         Danh mục sản phẩm
                     </h4>
                     <ng-container *ngFor="let mn of menus">
-						<ul class="p-b-54">
 							<ng-container *ngFor="let m of mn.children">
 								<li class="p-t-6 p-b-8 bo6"><a class="s-text13 p-t-5 p-b-5" [routerLink]="['/product/list',m.item_group_id]">{{m.item_group_name}}</a></li>
 							</ng-container>
-						</ul>
 					</ng-container>
                     
-
                     <!-- Featured Products -->
                     <h4 class="m-text23 p-t-65 p-b-34">
                         Sản phẩm tương tự
@@ -134,14 +131,10 @@
                     <div class="wrap-tags flex-w">
 
                         <ng-container *ngFor="let mn of menus">
-                         
                                 <ng-container *ngFor="let m of mn.children">
                                      <a   class="tag-item" [routerLink]="['/product/list',m.item_group_id]">{{m.item_group_name}}</a> 
                                 </ng-container>
-                          
                         </ng-container>
-
-                         
                     </div>
                 </div>
             </div>

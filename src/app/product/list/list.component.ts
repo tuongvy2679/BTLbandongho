@@ -16,7 +16,9 @@ export class ListComponent extends BaseComponent implements OnInit {
   totalItems: any;
   item_group_id: any;
   public items: any;
-
+  name:any;
+  SortDirection = 'asc';
+  SortbyParam = '';
   public totalRecords: any;
 
   constructor(injector: Injector, private _rou: Router) {
@@ -59,6 +61,10 @@ export class ListComponent extends BaseComponent implements OnInit {
     this._cart.addToCart(it);
     alert('Thêm thành công!');
   }
-
+  onAsc() { 
+    this._api.get('/api/item/get-data-asc',).takeUntil(this.unsubscribe).subscribe(res => {
+      this.loadPage(this.page); 
+      });
+  }
 
 }

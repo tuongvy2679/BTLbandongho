@@ -28,8 +28,23 @@ export class TintucComponent extends BaseComponent implements OnInit {
     });
     this.getByID(id);
   }
+  ngAfterViewInit() { 
+    setTimeout(() => {
+      this.loadScripts();
+    }); 
+  }
   getByID(id){
     this._api.get('/api/news/get_tintuc_id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+    this.item = res;
+   
+    this.getByCategory(res.item_group_id)      
+    setTimeout(() => {
+        this.loadScripts();
+      });
+    });
+  }
+  getByID1(id){
+    this._api.get('/api/item/get_by_id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
     this.item = res;
    
     this.getByCategory(res.item_group_id)      
@@ -51,9 +66,5 @@ export class TintucComponent extends BaseComponent implements OnInit {
     this._cart.addToCart(item);
     alert('Thêm thành công!'); 
   }
-  ngAfterViewInit() { 
-    setTimeout(() => {
-      this.loadScripts();
-    }); 
-  }
+ 
 }

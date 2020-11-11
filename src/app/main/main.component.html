@@ -159,7 +159,8 @@
 
 										<span class="block2-price m-text6
 											p-r-5">
-											{{it.item_price}}
+											{{ it.item_price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}}
+
 										</span>
 									</div>
 								</div>
@@ -367,8 +368,8 @@
 						</h4>
 
 						<span class="s-text6">By</span> <span
-							class="s-text7">Nguyễn Tường Vy</span>
-						<span class="s-text6">on</span> <span
+							class="s-text7"> Nguyễn Tường Vy </span>
+						<span class="s-text6"></span> <span
 							class="s-text7">Tháng 7, 22, 2020</span>
 
 						<p class="s-text8 p-t-16" style="height: 200px;overflow: hidden;">
